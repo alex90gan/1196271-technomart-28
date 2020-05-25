@@ -1,0 +1,9 @@
+html,
+body{
+	background-color: green;
+}
+.slider{
+	width: 620px;
+	height: 266px;
+	background-image: url(../img/Worker-with-a-drill.jpg);
+}

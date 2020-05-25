@@ -2,41 +2,56 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Техномарт»</title>
 </head>
-
 <body>
-
 <header>
-	<section>
-		<a href="#"><img src="https://via.placeholder.com/150x100" alt="Логотип"></a>
+	<section class="header-menu">
+		<span class="logo-technomart">
+		<a href="#"><img src="./img/svg/
+			logo-technomart.svg" alt="Логотип">
+		</a>
+		</span class="icon-search">
+		<span>
+		<img src="./img/svg/icon-search.svg" alt="Поиск">	
 		<form>
 			<label>Поиск:</label>
 			<input type="text" name="">
 		</form>
+		</span>
 		<ul>
-			<li><a href="#">Закладки: 0</a></li>
-			<li><a href="#">Корзина: 0</a></li>
+			<li>
+				<a href="#"><img src="./img/svg/icon-bookmark.svg" alt="Закладки: 0">
+				Закладки: 0
+				</a>
+			</li>
+			<li><a href="#"><img src="./img/svg/
+				icon-cart.svg" alt="Корзина: 0">
+				Корзина: 0
+				</a>
+			</li>
 		</ul>
 		<button>Оформить заказ</button>
 	</section>
 	<section>
 		<h1>
-			Интернет-магазин строительных материалов и инструментов для ремонта
+			Интернет-магазин  строительных материалов  и инструментов для ремонта
 		</h1>
 		<a href="tel:+78125550555">+7 (812) 555-05-55</a>
+		<img src="./img/svg/icon-phone.svg">
 		<address>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
 	</section>
 	<ul>
-		<li><button>Войти</button></li>
+		<li><img src="./img/svg/icon-login.svg">
+			<button>Войти</button></li>
 		<li><button>Регистрация</button></li>
 	</ul>
-
-  <nav>
+  <nav class="bread-crumbs">
     <ul>
       <li><a href="#">Главная</a></li>
       <li><a href="#">Компания</a></li>
-       <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
       <li><a href="#">Новости</a></li>
       <li><a href="#">Спецпредложения</a></li>
       <li><a href="#">Доставка</a></li>
@@ -45,6 +60,131 @@
   </nav>
 </header>
 <main>
+	<section class="group-eleven">
+		<ul>
+			<li class="catalog-new">
+				Материалы<a href="#"><img src="./img/button/materials.svg"></a>
+				<img src="./img/svg/icon-1.svg">
+			</li>
+			<li>
+				Инструменты<a href="#"><img src="./img/button/instrument.svg"></a>
+				<img src="./img/svg/icon-2.svg">
+
+			</li>
+			<li>
+				техника<a href="#"><img src="./img/button/tekhnika.svg"></a>
+				<img src="./img/svg/icon-3.svg">
+			</li>
+			<li>
+				 скидки 50%<a href="#"><img src="./img/button/stocks.svg"></a>
+				<img src="./img/svg/icon-4.svg">
+			</li>
+			<li>
+				доставка<a href="#"><img src="./img/button/t.svg"></a>
+				<img src="./img/svg/icon-5.svg">
+			</li>	
+		</ul>
+		<div class="slider">
+			<h3>Перфораторы</h3>
+			<p>настоящие мужские игрушки</p>
+			<a href="#"><img src="./img/button/big-red-button.svg" alt="Каталог Перфораторы">
+			</a>
+			<button><img src="./img/svg/icon-left.svg">
+			</button>
+			<button><img src="./img/svg/icon-right.svg">
+			</button>
+			<button><img src="./img/button/slider-indicator.svg">
+			</button>
+			<button><img src="./img/button/slider-indicator.svg">
+			</button>
+		</div>
+	</section>
+	<section class="popular-goods">
+		<h2>Популярные товары</h2>
+		<a href="#"><img src="./img/button/popular-goods.svg">
+		</a>
+		<ul>
+			<li>	
+			<img src="./img/Hammer-drill-BOSH-BFG-9000.jpg"
+			alt="">
+			<a href="#">Перфоратор Bosh BFG 9000</a>
+			<p>32500</p>
+			<p>25500</p>
+			<div>
+				<button>Купить</button>
+				<button>В закладки</button>
+			</div>
+			</li>
+			<li class="catalog-new">
+			<img src="./img/Hammer-drill-BOSH-BFG-3000.jp"
+			alt="">
+			<a href="#">Перфоратор Bosh BFG 3000</a>
+			<p>22500</p>
+			<p>15500</p>
+			<div>
+				<button>Купить</button>
+				<button>В закладки</button>
+			</div>
+			</li>
+			<li>
+			<img src="./img/Hammer-drill-BOSH-BFG-6000.jpg"
+			alt="">
+			<a href="#">Перфоратор Bosh BFG 6000</a>
+			<p>30500</p>
+			<p>25500</p>
+			<div>
+				<button>Купить</button>
+				<button>В закладки</button>
+			</div>
+			</li>
+			<li class="catalog-new">
+			<img src="./img/Hammer-drill-BOSH-BFG-6000.jpg"
+			alt="">
+			<a href="#">Перфоратор Bosh BFG 2000</a>
+			<p>12500</p>
+			<div>
+				<button>Купить</button>
+				<button>В закладки</button>
+			</div>
+			</li>
+		</ul>
+	</section>
+	<section class="popular-manufacturers">
+		<h2>популярные производители</h2>
+		<a href="#"><img src="./img/button/popular-manufacturers.svg"></a>
+			<ul>
+		<li><a href="#"><img src="./img/partner-logo-BOSH.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-Makita.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-DeWALT.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-INTERSKOL.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-HITACHI.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-LG.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-AEG.jpg"></a></li>
+		<li><a href="#"><img src="./img/partner-logo-metabo.jpg"></a></li>
+	</ul>
+	</section>
+	<section class="services">
+		<h2>Сервисы</h2>
+		<p>
+			Хороший интернет-магазин отличается от плохого не только ценами!
+			Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+		</p>
+		<ul>
+			<li><button>Доставка</button></li>
+			<li><button>Гарантия</button></li>
+			<li><button>Кредит</button></li>
+		</ul>
+		<article>
+			<h3>Доставка</h3>
+			<p>
+				Мы с удовольствием доставим ваш товар прямо 
+				к вашему подъезду совершенно бесплатно!
+				Ведь мы неплохо заработаем, 
+				поднимая его на ваш этаж!
+			</p>
+			<img src="./img/Layer-131-1.png">
+		</article>
+	</section>
 	<section>
 		<h2>КОМПАНИЯ &laquo;ТЕХНОМАРТ&raquo;</h2>
 		<p>
@@ -59,7 +199,7 @@
 			<li>Автотрейдинг</li>
 			<li>ЖелДорЭкспедиция</li>
 		</ul>
-		<a href="#">Подробнее о компании</a>
+		<a href="#"><img src="./img/button/about.svg"></a>
 
 	</section>
 	<section>
@@ -68,18 +208,16 @@
 			Вы можете забрать товар сами, заехав в наш офис:
 		</p>
 		<div>
-			Карта
-		</div>
+			<img src="./img/map.png">
 		<button>
-			Заблудились? Напишите Нам!
+			<img src="./img/button/communication.svg">
 		</button>
+		</div>
 	</section>
-
-
  </main>
  <footer>
  	<section>
- 	<a href="#"><img src="https://via.placeholder.com/150x100" alt="Логотип"></a>
+ 	<a href="#"><img src="./img/svg/logo-technomart.svg" alt="Логотип"></a>
  	<address>
 		г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 	</address>
@@ -106,9 +244,9 @@
  		<p>Все права защищены</p>
  		</div>
  		<ul>
- 			<li><a href="#">Вконтакте</a></li>
- 			<li><a href="#">Фэйсбук</a></li>
- 			<li><a href="#">Инстаграм</a></li>
+ 			<li><a href="#"><img src="./img/svg/icon-vk.svg"></a></li>
+ 			<li><a href="#"><img src="./img/svg/icon-fb.svg"></a></li>
+ 			<li><a href="#"><img src="./img/svg/icon-insta.svg"></a></li>
  		</ul>
  		<ul>
  			<li>
