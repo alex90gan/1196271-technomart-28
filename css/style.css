@@ -1,9 +1,346 @@
-html,
-body{
-	background-color: green;
+/* Variables */
+
+:root {
+  --basic-red: #ee3643;
+  --basic-green: #63a63e;
+  --basic-grey: #3d546f;
+  --basic-greylight: #c5c5c5;
+  --basic-background: #F1F5F7;
+  --basic-white: #ffffff;
+
+
+  --special: #663d15;
+  --special-yellow: #ffbf47;
+  --special-red:  #BA2732; 
 }
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* Global */
+
+body{
+	font-family: Cuprum;
+	font-size: 14px;	
+}
+.wrapper{
+	width: 940px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+}
+.button:active {
+	border-color: #4777a6;
+	background: #4e87c0;
+	color: #fff;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.page{
+	height: 100%;
+}
+.page-body{
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Header */
+
+.header{
+	background-color: rgba(0, 0, 0, 0.1);
+	padding-bottom: 60px;
+}
+.header-menu{
+	background: #293449;
+	color: #ffffff;
+}
+.header-menu-container{
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-menu-link{
+	color: #ffffff;
+	position: relative;
+	display: inline-block;
+	padding-left: 24px; 
+}
+.header-menu-link::before{
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	opacity: 0.3; 
+}
+.header-menu-link:hover::before{
+	opacity: 1;
+}
+.logo-technomart{
+	padding: 0;
+	width: 220px;
+	height: 47px;
+	background-image: url("../img/svg/logo-technomart.svg");
+}
+.search::before{
+	width: 17px;
+	height: 17px;
+	background-image: url("../img/svg/icon-search.svg");
+}
+.bookmark::before{
+	width: 14px;
+	height: 16px;
+	background-image: url("../img/svg/icon-bookmark.svg");
+
+}
+.cart::before{
+	width: 15px;
+	height: 15px;
+	background-image: url("../img/svg/icon-cart.svg");
+}
+
+.contacts{
+	width: 100%;
+	max-width: 940px;
+  	padding: 0;
+	margin: 0 auto;
+	display: flex;
+  	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.shop-description{
+	width: 197px;
+	color: #EE3643;
+	font-size: 16px;
+	line-height: 23px;
+	font-style: italic;
+	font-weight: normal;
+}
+.login-section{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-width: 281px;
+	
+}
+.login{
+	margin: 0 auto;
+	text-align: center;
+	width: 121px; 
+	height: 45px;
+	border: 1px solid black;
+}
+.registration{
+	margin-left: 20px;
+	width: 150px;
+	height: 45px;
+	border: 1px solid black;
+}
+.login-link::before{
+	color: red;
+	width: 20px;
+	height: 17px;
+	background-image: url("../img/svg/icon-login.svg");
+}
+.registration-link{
+	width: 150px;
+}
+
+.navigation{
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+	padding-top: 16px;
+	padding-bottom: 20px;
+	background-color: #293449; 
+}
+.navigation-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+}
+.navigation-link{
+	color: #ffffff;
+}
+
+/* Main */
+
 .slider{
 	width: 620px;
 	height: 266px;
 	background-image: url(../img/Worker-with-a-drill.jpg);
 }
+.special-title{
+	background-color: #f9f5f0;
+	margin: 0;
+	margin-top: 59px;
+    margin-bottom: 20px;
+	padding-right: 14px;
+	padding-left: 28px;
+	display: flex;
+	justify-content: space-between;
+}
+.special-title-caption{
+	padding: 0;
+	margin: 0;
+	margin-top: 29px;
+	margin-bottom: 30px; 
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Cuprum","Arial",sans-serif;
+    display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	color: #32425C;
+}
+.special-title-link{
+	font-family: Cuprum;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 192px;	
+	margin:0;
+	padding: 0;
+	margin-top: 25px;
+    margin-bottom: 26px;
+    box-sizing: border-box;
+	color: #ffffff;
+	background: var(--basic-red);
+	text-transform: uppercase;
+}
+.special-title-link:active{
+	background: var(--special-red);
+}
+.special-title-link:focus{
+	outline: none;
+	background: var(--special-red); 
+}
+.cards-list{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: calc(100% + 20px);
+}
+.card{
+	width: 220px; 
+	box-sizing: border-box;
+	border: 1px solid #eaeaea;
+	margin-right: 20px;
+	position: relative;
+    margin-bottom: 21px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.card-img-container{
+	height: 170px;
+	margin-bottom: 10px;
+}
+.card-img{
+	max-height: 100%;
+}
+.card-name{
+	font-size: 20px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
+    color: #000000;
+}
+.card-button-container{
+	display: none;
+	padding-top: 38px;
+	padding-left: 40px; 
+	padding-right: 40px;
+}
+.card:hover{
+	box-shadow: 3px 3px 2px 3px #888888;
+}
+.card:hover .card-button-container{
+	display: block;
+}
+.card:hover .card-img{
+	display: none;
+}
+.card-button{
+	display: block;
+	margin-bottom: 20px;
+	height: 38px;
+	width: 100%;
+	border: none;
+	text-transform: uppercase;
+}
+.card-button-buy{
+	background: var(--basic-green);
+	color: #ffffff;
+	border-bottom: 2px solid green;
+}
+.card-button-bookmark{
+	background: var(--basic-white);
+	color: blue;
+	border: 2px solid var(--basic-green);
+}
+.card-old-price{
+color: #a9a9a9;
+text-transform: uppercase;
+font-size: 18px;
+text-decoration-line: line-through;
+font-weight: bold;
+margin: 0;
+padding: 0;
+margin-bottom: 12px;
+}
+.card-new-price{
+	text-align: center;
+    background: #58a;
+    background: linear-gradient(-135deg, transparent 26px, red 0) top right, linear-gradient(-45deg, transparent 26px, red 0) bottom right;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 47px 7px 42px;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 4px 0 0 4px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-price-block{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
