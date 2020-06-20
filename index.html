@@ -33,8 +33,10 @@
         <section class="contacts">
             <h1 class="shop-description">Интернет-магазин строительных материалов <br>и инструментов для ремонта</h1>
             <div class="contacts-info">
-                <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-                <img src="./img/svg/icon-phone.svg" width="19" height="19" alt="Телефон">
+                <div class="telephone">
+                    <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                    <img src="./img/svg/icon-phone.svg" width="19" height="19" alt="Телефон">
+                </div>
                 <address>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             </div>
             <div class="login-section">
@@ -342,27 +344,6 @@
 			Заблудились? Напишите нам!
 		</button>
                 </section>
-            </div>
-            <section class="write-us">
-                <h2>Заблудились?Напишите нам!</h2>
-                <img src="./img/svg/icon-close.svg">
-                <form action="https://echo.htmlacademy.ru" method="post">
-                    <p>
-                        <label for="appointment-name">Ваше имя:</label>
-                        <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
-                    </p>
-                    <p>
-                        <label for="appointment-email">Ваш e-mail:</label>
-                        <input id="appointment-e-mail" type="text" name="e-mail" placeholder="email@example.com">
-                    </p>
-                    <p>
-                        <label for="appointment-letter">Текст письма:</label>
-                        <input id="appointment-letter" type="text" name="letter" placeholder="В свободной форме">
-                    </p>
-                    <button type="sibmit">Отправить</button>
-                </form>
-            </section>
-        </div>
     </main>
     <footer class="footer-main">
         <section class="footer-up">
@@ -449,39 +430,56 @@
             </div>
         </section>
     </footer>
-    <section>
-        <h2>Личный кабинет</h2>
-        <p>Введите пожалуйста свой логин и пароль</p>
+
+    <section class="write-us">
+        <button class="close-btn-write-us" type="button">
+            <span class="visually-hidden">
+                Закрыть
+            </span>
+        </button>
         <form action="https://echo.htmlacademy.ru" method="post">
-            <p>
-                <label for="login-login">Логин</label>
-                <input id="login-login" type="email" name="login" placeholder="email@example.com">
+            <div class="write-us-container write-us-name">
+                <p class="write-us-input-block">
+                    <label class="write-us-label" for="appointment-name">Ваше имя:</label>
+                    <input class="write-us-input" id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+                </p>
+                <p class="write-us-input-block">
+                    <label class="write-us-label" for="appointment-email">Ваш e-mail:</label>
+                    <input class="write-us-input" id="appointment-e-mail" type="text" name="e-mail" placeholder="email@example.com">
+                </p>
+            </div>
+            <p class="write-us-container">
+                <label class="write-us-label" for="appointment-letter">Текст письма:</label>
+                <textarea class="letter" rows="4" id="appointment-letter" name="letter" placeholder="В свободной форме">
+
+                </textarea>
             </p>
-            <p>
-                <label for="login-password">Пароль</label>
-                <input id="login-password" type="password" name="password" placeholder="••••••••">
-            </p>
-            <p>
-                <label>
-        <input type="checkbox" name="remember">
-        Запомните меня
-      </label>
-                <a href="#">Я забыл пароль!</a>
-            </p>
-            <button type="submit">Войти</button>
+            <div class="write-us-buttons">
+                <button class="send-us-button" type="submit">
+                    Отправить
+                </button>
+            </div>
         </form>
-        <button type="button">Закрыть</button>
     </section>
 
 
-
-    <section>
-        <h2>Как до нас добраться</h2>
-        <!-- Здесь будет карта -->
-        <button type="button">Закрыть</button>
+    <section class="modal-buy">
+        <button class="close-btn" type="button">
+            <span class="visually-hidden">
+                Закрыть
+            </span>
+        </button>
+        <p class="modal-buy-text">Товар добавлен в корзину!</p>
+        <div class="modal-buy-buttons">
+            <a class="modal-buy-button button-create-order">
+                Оформить заказ
+            </a>
+            <button class="modal-buy-button button-return" type="button">
+                Продолжить покупки
+            </button>
+        </div>
     </section>
-    <script>
-        // document.getElementById('button').focus();
+    <script src='js/script.js'>
     </script>
 </body>
 
