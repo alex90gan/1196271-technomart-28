@@ -240,11 +240,24 @@ a {
     margin: 0;
     margin-left: 29px;
     width: 197px;
-    color: var(--basic-red-red);
+    color: var(--basic-red);
     font-size: 16px;
     line-height: 24px;
     font-style: italic;
     font-weight: normal;
+}
+
+.telephone {
+    position: relative;
+    margin: 46px 50px 4px 22px;
+    border: 3px solid #fff;
+    width: 264px;
+    font-size: 21px;
+    line-height: 18px;
+}
+
+.telephone::before {
+    content: "";
 }
 
 .user-block {
@@ -976,6 +989,24 @@ a {
     display: none;
 }
 
+.services-item {
+    position: relative;
+}
+
+.services-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: url("../img/border.gif") repeat-x top left;
+}
+
+.services-item:last-child::after {
+    display: none;
+}
+
 .services-article-delivery {
     background: url("../img/Layer-131-1.png") no-repeat top right;
 }
@@ -1068,10 +1099,6 @@ a {
     line-height: 40px;
 }
 
-.write-us {
-    display: none;
-}
-
 .write-us-button {
     font-family: Cuprum;
     font-style: normal;
@@ -1089,6 +1116,11 @@ a {
     color: #ffffff;
     background: var(--basic-red);
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.write-us-button:active {
+    outline: none;
 }
 
 .about-us-button {
@@ -1413,4 +1445,190 @@ a {
 
 .communication-list-item {
     margin-left: 51px;
+}
+
+
+/****************Modal*****************/
+
+.modal-buy {
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 620px;
+    min-height: 282px;
+    border-top: 6px solid var(--basic-red);
+    background: var(--basic-white);
+    padding-top: 68px;
+    text-align: center;
+}
+
+.modal-buy-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.close-btn {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: var(--basic-red);
+    cursor: pointer;
+}
+
+.modal-buy-text {
+    padding: 0;
+    padding-left: 91px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: -96px;
+}
+
+.modal-buy-text::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    top: -20px;
+    left: -3px;
+    background: var(--basic-green);
+}
+
+.modal-buy-buttons {
+    background: var(--basic-greylight);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.modal-buy-button {
+    display: block;
+    padding: 10px 20px;
+}
+
+.button-create-order {
+    background: var(--basic-red);
+    color: var(--basic-white);
+}
+
+.button-return {
+    background: var(--basic-white);
+    color: var(--basic-black);
+    border: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.write-us {
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 620px;
+    min-height: 282px;
+    border-top: 6px solid var(--basic-red);
+    background: var(--basic-white);
+    padding-top: 68px;
+}
+
+.write-us-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.write-us-buttons {
+    background: var(--basic-greylight);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.send-us-button {
+    display: block;
+    margin: 0 auto;
+    width: 460px;
+    padding: 10px;
+    background: var(--basic-red);
+    color: var(--basic-white);
+    border: none;
+}
+
+.letter {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 37px;
+    min-width: 460px;
+    min-height: 114px;
+}
+
+.letter::placeholder {
+    color: #000000;
+}
+
+.close-btn-write-us {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: var(--basic-red);
+    cursor: pointer;
+}
+
+.write-us-container {
+    width: 460px;
+    margin: 0 auto;
+}
+
+.write-us-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.write-us-input-block {
+    width: 220px;
+}
+
+.write-us-label {
+    display: block;
+    font-size: 18px;
+    font-family: 'Cuprum';
+    margin-bottom: 10px;
+    ;
+}
+
+.write-us-input {
+    width: 220px;
+    height: 38px;
 }
