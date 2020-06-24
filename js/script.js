@@ -6,8 +6,8 @@ let writeUsButton = document.querySelector('.write-us-button');
 let writeUs = document.querySelector('.write-us');
 let closeWriteUs = document.querySelector('.close-btn-write-us');
 
-let mapButtonActive = document.querySelector('map-button-active')
-let modalMap = document.querySelector('modal-map')
+let mapButtonActive = document.querySelector('.map-button-active')
+let modalMap = document.querySelector('.modal-map')
 let closeBtnMap = document.querySelector('.close-btn-map')
 
 cardButtonsBuy.forEach(function(item) {
@@ -31,7 +31,8 @@ closeWriteUs.addEventListener('click', function() {
     writeUs.classList.remove('write-us-show');
 });
 
-mapButtonActive.addEventListener('click', function() {
+mapButtonActive.addEventListener('click', function(e) {
+    e.preventDefault();
     modalMap.classList.add('modal-map-show');
 });
 

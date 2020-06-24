@@ -1,1745 +1,1811 @@
-                                                                    /* Variables */
-                                                                    
-                                                                     :root {
-                                                                        --basic-red: #ee3643;
-                                                                        --basic-green: #63a63e;
-                                                                        --basic-grey: #3d546f;
-                                                                        --basic-greylight: #c5c5c5;
-                                                                        --basic-background: #f1f5f7;
-                                                                        --basic-black: #000000;
-                                                                        --basic-white: #ffffff;
-                                                                        --special: #663d15;
-                                                                        --special-yellow: #ffbf47;
-                                                                        --special-blue: #3bbce3;
-                                                                        --special-lilac: #dc91d8;
-                                                                        --special-red: #BA2732;
-                                                                        --special-greenlight: #8ed78f;
-                                                                        --special-bluelilac: #32425C;
-                                                                    }
-                                                                    
-                                                                    *,
-                                                                    *::before,
-                                                                    *::after {
-                                                                        box-sizing: border-box;
-                                                                    }
-                                                                    /* Global */
-                                                                    
-                                                                    body {
-                                                                        font-family: "Cuprum", "PT Sans", "Arial", sans-serif;
-                                                                        font-size: 14px;
-                                                                    }
-                                                                    
-                                                                    h1,
-                                                                    h2,
-                                                                    h3,
-                                                                    h4,
-                                                                    h5,
-                                                                    h6 {
-                                                                        font-family: 'Cuprum', sans-serif;
-                                                                    }
-                                                                    
-                                                                    p {
-                                                                        font-family: 'PT Sans', sans-serif;
-                                                                    }
-                                                                    
-                                                                    .wrapper {
-                                                                        width: 940px;
-                                                                        margin: 0 auto;
-                                                                    }
-                                                                    
-                                                                    a {
-                                                                        text-decoration: none;
-                                                                    }
-                                                                    
-                                                                    .button:active {
-                                                                        border-color: #4777a6;
-                                                                        background: #4e87c0;
-                                                                        color: #fff;
-                                                                    }
-                                                                    
-                                                                    .visually-hidden {
-                                                                        position: absolute;
-                                                                        width: 1px;
-                                                                        height: 1px;
-                                                                        margin: -1px;
-                                                                        border: 0;
-                                                                        padding: 0;
-                                                                        clip: rect(0 0 0 0);
-                                                                        overflow: hidden;
-                                                                    }
-                                                                    /* Header */
-                                                                    
-                                                                    .header {
-                                                                        background-color: rgba(0, 0, 0, 0.1);
-                                                                        padding-bottom: 60px;
-                                                                    }
-                                                                    
-                                                                    .header-menu {
-                                                                        background: #293449;
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .header-menu-container {
-                                                                        width: 100%;
-                                                                        max-width: 940px;
-                                                                        margin: 0 auto;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        justify-content: space-between;
-                                                                        align-items: flex-start;
-                                                                        position: relative;
-                                                                        padding-left: 220px;
-                                                                    }
-                                                                    
-                                                                    .header-menu-link {
-                                                                        color: #ffffff;
-                                                                        display: inline-block;
-                                                                        position: relative;
-                                                                        padding-top: 11px;
-                                                                        padding-bottom: 11px;
-                                                                        padding-right: 23px;
-                                                                        font-size: 18px;
-                                                                    }
-                                                                    
-                                                                    .bookmark {
-                                                                        padding-left: 37px;
-                                                                    }
-                                                                    
-                                                                    .cart {
-                                                                        padding-left: 54px;
-                                                                    }
-                                                                    
-                                                                    .header-menu-link::before {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        top: 0;
-                                                                        left: 0;
-                                                                        opacity: 0.5;
-                                                                    }
-                                                                    
-                                                                    .header-menu-link:hover::before {
-                                                                        opacity: 1;
-                                                                    }
-                                                                    
-                                                                    .header-button {
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .logo-technomart {
-                                                                        position: absolute;
-                                                                        top: 0;
-                                                                        left: 0;
-                                                                        padding: 0;
-                                                                        width: 220px;
-                                                                        height: 47px;
-                                                                    }
-                                                                    
-                                                                    .search-container {
-                                                                        width: 271px;
-                                                                        height: 42px;
-                                                                    }
-                                                                    
-                                                                    .search-form {
-                                                                        height: 100%;
-                                                                        width: 100%;
-                                                                        position: relative;
-                                                                    }
-                                                                    
-                                                                    .search-input {
-                                                                        height: 100%;
-                                                                        width: 100%;
-                                                                        border: none;
-                                                                        background: transparent;
-                                                                        padding-left: 42px;
-                                                                        font-size: 18px;
-                                                                    }
-                                                                    
-                                                                    .search-svg {
-                                                                        position: absolute;
-                                                                        fill: var(--basic-white);
-                                                                        opacity: 0.5;
-                                                                        left: 16px;
-                                                                        top: 12px;
-                                                                    }
-                                                                    
-                                                                    .search-input:hover+.search-svg {
-                                                                        opacity: 1;
-                                                                    }
-                                                                    
-                                                                    .search-svg:hover {
-                                                                        opacity: 1;
-                                                                    }
-                                                                    
-                                                                    .search-input:focus {
-                                                                        background: var(--basic-white);
-                                                                        outline: none;
-                                                                    }
-                                                                    
-                                                                    .search-input:focus+.search-svg {
-                                                                        opacity: 1;
-                                                                        fill: var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .search-input:valid {
-                                                                        background: var(--basic-white);
-                                                                    }
-                                                                    
-                                                                    .search-input:valid+.search-svg {
-                                                                        fill: var(--basic-red);
-                                                                        opacity: 1;
-                                                                    }
-                                                                    
-                                                                    .search-input::placeholder {
-                                                                        color: var(--basic-white);
-                                                                    }
-                                                                    
-                                                                    .bookmark::before {
-                                                                        width: 14px;
-                                                                        height: 16px;
-                                                                        left: 18px;
-                                                                        top: 12px;
-                                                                        background-image: url("../img/svg/icon-bookmark.svg");
-                                                                    }
-                                                                    
-                                                                    .cart::before {
-                                                                        width: 15px;
-                                                                        height: 15px;
-                                                                        top: 13px;
-                                                                        left: 32px;
-                                                                        background-image: url("../img/svg/icon-cart.svg");
-                                                                    }
-                                                                    
-                                                                    .create-order {
-                                                                        border: none;
-                                                                        padding: 11px 20px;
-                                                                        font-size: 18px;
-                                                                        font-family: 'Cuprum';
-                                                                        background: var(--basic-green);
-                                                                        color: var(--basic-white);
-                                                                    }
-                                                                    
-                                                                    .contacts {
-                                                                        width: 100%;
-                                                                        max-width: 940px;
-                                                                        padding: 0;
-                                                                        padding-top: 43px;
-                                                                        padding-bottom: 44px;
-                                                                        margin: 0 auto;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        justify-content: space-between;
-                                                                        align-items: center;
-                                                                    }
-                                                                    
-                                                                    .shop-description {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        margin-left: 29px;
-                                                                        width: 197px;
-                                                                        color: var(--basic-red);
-                                                                        font-size: 16px;
-                                                                        line-height: 24px;
-                                                                        font-style: italic;
-                                                                        font-weight: normal;
-                                                                    }
-                                                                    
-                                                                    .telephone {
-                                                                        position: relative;
-                                                                        margin: 46px 50px 4px 22px;
-                                                                        border: 3px solid #fff;
-                                                                        width: 264px;
-                                                                        font-size: 21px;
-                                                                        line-height: 18px;
-                                                                    }
-                                                                    
-                                                                    .telephone::before {
-                                                                        content: "";
-                                                                    }
-                                                                    
-                                                                    .user-block {
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        flex-direction: column;
-                                                                        color: var(--basic-black);
-                                                                        background-color: var(--basic-background);
-                                                                    }
-                                                                    
-                                                                    .authorized:active {
-                                                                        color: var(--basic-greylight);
-                                                                    }
-                                                                    
-                                                                    .user-block-login {
-                                                                        display: flex;
-                                                                        flex-wrap: nowrap;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .authorized {
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        padding: 12px 65px 14px 46px;
-                                                                        font-weight: 400;
-                                                                        font-style: normal;
-                                                                        font-size: 21px;
-                                                                        line-height: 18px;
-                                                                        font-family: "Cuprum", "Arial", sans-serif;
-                                                                        color: #000;
-                                                                        background-color: #fff;
-                                                                    }
-                                                                    
-                                                                    .authorized-button,
-                                                                    .login-buttons {
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        cursor: pointer;
-                                                                        border: none;
-                                                                        outline: none;
-                                                                        background: var(--basic-white);
-                                                                    }
-                                                                    
-                                                                    .authorized-button:hover .login-buttons {
-                                                                        fill: var(--basic-grey);
-                                                                    }
-                                                                    
-                                                                    .authorized-button:active .login-buttons {
-                                                                        fill: var(--basic-greylight);
-                                                                    }
-                                                                    
-                                                                    .user {
-                                                                        width: 20px;
-                                                                        height: 18px;
-                                                                        fill: var(--basic-greylight)
-                                                                    }
-                                                                    
-                                                                    .login-image {
-                                                                        width: 20px;
-                                                                        height: 17px;
-                                                                        fill: var(--basic-greylight)
-                                                                    }
-                                                                    
-                                                                    .logout {
-                                                                        width: 20px;
-                                                                        height: 17px;
-                                                                        fill: var(--basic-greylight)
-                                                                    }
-                                                                    
-                                                                    .information {
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .my-orders {
-                                                                        display: inline-block;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        font-weight: 400;
-                                                                        font-size: 14px;
-                                                                        line-height: 18px;
-                                                                        text-align: center;
-                                                                    }
-                                                                    
-                                                                    .my-orders:active {
-                                                                        color: var(--basic-greylight);
-                                                                    }
-                                                                    
-                                                                    .my-orders:hover {
-                                                                        color: var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .cabinet {
-                                                                        display: inline-block;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        font-weight: 400;
-                                                                        font-size: 14px;
-                                                                        line-height: 18px;
-                                                                        text-align: center;
-                                                                    }
-                                                                    
-                                                                    .cabinet:active {
-                                                                        color: var(--basic-greylight);
-                                                                    }
-                                                                    
-                                                                    .cabinet:hover {
-                                                                        color: var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .login-section {
-                                                                        width: 100%;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                        align-items: center;
-                                                                        list-style: none;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        max-width: 281px;
-                                                                    }
-                                                                    
-                                                                    .login {
-                                                                        margin: 0 auto;
-                                                                        text-align: center;
-                                                                        width: 121px;
-                                                                        height: 45px;
-                                                                        background: #ffffff;
-                                                                        color: #000000;
-                                                                    }
-                                                                    
-                                                                    .registration {
-                                                                        margin-left: 11px;
-                                                                        padding-left: 22px;
-                                                                        width: 150px;
-                                                                        height: 45px;
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 21px;
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        text-align: center;
-                                                                        background: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .registration-link {
-                                                                        width: 150px;
-                                                                        color: #000000;
-                                                                    }
-                                                                    
-                                                                    .navigation {
-                                                                        width: 100%;
-                                                                        max-width: 940px;
-                                                                        margin: 0 auto;
-                                                                        padding-top: 16px;
-                                                                        padding-bottom: 20px;
-                                                                        background-color: #293449;
-                                                                    }
-                                                                    
-                                                                    .navigation-list {
-                                                                        list-style: none;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        display: flex;
-                                                                        justify-content: space-around;
-                                                                    }
-                                                                    
-                                                                    .navigation-link {
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 18px;
-                                                                        line-height: 24px;
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .bread-crumbs {
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                        padding-top: 20px;
-                                                                        margin-bottom: 32px;
-                                                                    }
-                                                                    /**********************Main************************/
-                                                                    
-                                                                    .promo-block {
-                                                                        margin-bottom: 60px;
-                                                                        margin-top: 59px;
-                                                                    }
-                                                                    
-                                                                    .promo-block-container {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        list-style: none;
-                                                                        display: grid;
-                                                                        grid-template-columns: 1fr 1fr 1fr;
-                                                                        gap: 20px;
-                                                                    }
-                                                                    
-                                                                    .slider-block {
-                                                                        grid-column: 1/3;
-                                                                        grid-row: 2/4;
-                                                                    }
-                                                                    
-                                                                    .product-sections {
-                                                                        position: relative;
-                                                                        min-width: 300px;
-                                                                        min-height: 123px;
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .product-sections::after {
-                                                                        content: "";
-                                                                        display: block;
-                                                                        position: absolute;
-                                                                        background-repeat: no-repeat;
-                                                                        background-position: top left;
-                                                                    }
-                                                                    
-                                                                    .product-sections-text {
-                                                                        background: 0 0;
-                                                                        display: block;
-                                                                        margin: 21px 0 0 23px;
-                                                                        font-weight: 700;
-                                                                        font-size: 24px;
-                                                                        line-height: 30px;
-                                                                    }
-                                                                    
-                                                                    .product-sections-link {
-                                                                        display: inline-block;
-                                                                        min-width: 135px;
-                                                                        padding: 0;
-                                                                        padding-top: 10px;
-                                                                        padding-bottom: 10px;
-                                                                        padding-left: 10px;
-                                                                        padding-right: 10px;
-                                                                        margin: 12px 0 0 24px;
-                                                                        font-weight: 400;
-                                                                        font-size: 14px;
-                                                                        line-height: 18px;
-                                                                        text-decoration: none;
-                                                                        text-transform: uppercase;
-                                                                        text-align: center;
-                                                                        border-radius: 3px;
-                                                                        background: rgba(0, 0, 0, .1);
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .product-materials {
-                                                                        background: #FFBF47;
-                                                                    }
-                                                                    
-                                                                    .product-materials::after {
-                                                                        top: 33px;
-                                                                        right: 40px;
-                                                                        width: 44px;
-                                                                        height: 65px;
-                                                                        background-image: url("../img/svg/icon-1.svg");
-                                                                    }
-                                                                    
-                                                                    .product-tools {
-                                                                        background: #3BBCE3;
-                                                                    }
-                                                                    
-                                                                    .product-tools::after {
-                                                                        top: 33px;
-                                                                        right: 40px;
-                                                                        width: 75px;
-                                                                        height: 61px;
-                                                                        background-image: url("../img/svg/icon-2.svg");
-                                                                    }
-                                                                    
-                                                                    .product-equipment {
-                                                                        background: #DC91D8;
-                                                                    }
-                                                                    
-                                                                    .product-equipment::after {
-                                                                        top: 33px;
-                                                                        right: 40px;
-                                                                        width: 78px;
-                                                                        height: 62px;
-                                                                        background-image: url("../img/svg/icon-3.svg");
-                                                                    }
-                                                                    
-                                                                    .product-discounts {
-                                                                        background: #8ED78F;
-                                                                    }
-                                                                    
-                                                                    .product-discounts::after {
-                                                                        top: 33px;
-                                                                        right: 40px;
-                                                                        width: 59px;
-                                                                        height: 72px;
-                                                                        background-image: url("../img/svg/icon-4.svg");
-                                                                    }
-                                                                    
-                                                                    .product-delivery {
-                                                                        background: #FFC047;
-                                                                    }
-                                                                    
-                                                                    .product-delivery::after {
-                                                                        top: 33px;
-                                                                        right: 40px;
-                                                                        width: 78px;
-                                                                        height: 63px;
-                                                                        background-image: url("../img/svg/icon-5.svg");
-                                                                    }
-                                                                    /***************Slider***************/
-                                                                    
-                                                                    .slider {
-                                                                        width: 620px;
-                                                                        height: 266px;
-                                                                        /*background-image: url(../img/Worker-with-a-drill.jpg);*/
-                                                                        overflow: hidden;
-                                                                        position: relative;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-list {
-                                                                        height: 100%;
-                                                                        list-style: none;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        position: relative;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-item {
-                                                                        position: absolute;
-                                                                        width: 100%;
-                                                                        height: 100%;
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-first {
-                                                                        background: brown url("../img/slider-1.jpg") no-repeat top left;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-second {
-                                                                        background: brown url("../img/slider-2.jpg") no-repeat top left;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-content {
-                                                                        background: rgba(0, 0, 0, 0.5);
-                                                                        padding: 21px 21px 21px 23px;
-                                                                        margin-bottom: 95px;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-header {
-                                                                        font-size: 38px;
-                                                                        color: #ffffff;
-                                                                        text-transform: uppercase;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        margin-bottom: 5px;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-text {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .slider-screen-link {
-                                                                        display: inline-block;
-                                                                        padding: 10px 30px 10px 30px;
-                                                                        margin-left: 22px;
-                                                                        background: red;
-                                                                        color: #ffffff;
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .slider-first-screen:checked~.slider-screen-list .slider-screen-first {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .slider-second-screen:checked~.slider-screen-list .slider-screen-second {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .slider-bullet-block {
-                                                                        list-style: none;
-                                                                        width: 30px;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        left: 50%;
-                                                                        transform: translateX(-50%);
-                                                                        position: absolute;
-                                                                        bottom: 30px;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .slider-bullet-label {
-                                                                        display: block;
-                                                                        width: 10px;
-                                                                        height: 10px;
-                                                                        border-radius: 50%;
-                                                                        background: #ffffff;
-                                                                        box-sizing: content-box;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .slider-first-screen:checked~.slider-bullet-block .slider-bullet-first {
-                                                                        width: 6px;
-                                                                        height: 6px;
-                                                                        border-radius: 50%;
-                                                                        border: 2px solid #ffffff;
-                                                                        background: red;
-                                                                    }
-                                                                    
-                                                                    .slider-second-screen:checked~.slider-bullet-block .slider-bullet-second {
-                                                                        width: 6px;
-                                                                        height: 6px;
-                                                                        border-radius: 50%;
-                                                                        border: 2px solid #ffffff;
-                                                                        background: red;
-                                                                    }
-                                                                    
-                                                                    .flip {
-                                                                        display: block;
-                                                                        position: absolute;
-                                                                        cursor: pointer;
-                                                                        width: 22px;
-                                                                        height: 40px;
-                                                                        top: 50%;
-                                                                        transform: translateY(-50%);
-                                                                        background-repeat: no-repeat;
-                                                                        background-position: top left;
-                                                                    }
-                                                                    
-                                                                    .flip-first {
-                                                                        left: 20px;
-                                                                        background-image: url("../img/svg/icon-left.svg");
-                                                                    }
-                                                                    
-                                                                    .flip-second {
-                                                                        right: 20px;
-                                                                        background-image: url("../img/svg/icon-right.svg");
-                                                                    }
-                                                                    /****************************************************************/
-                                                                    
-                                                                    .special-title {
-                                                                        background-color: #f9f5f0;
-                                                                        margin: 0;
-                                                                        padding-right: 14px;
-                                                                        padding-left: 28px;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .special-title-caption {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        margin-top: 29px;
-                                                                        margin-bottom: 30px;
-                                                                        font-weight: 400;
-                                                                        font-style: normal;
-                                                                        font-size: 30px;
-                                                                        line-height: 30px;
-                                                                        font-family: "Cuprum", "Arial", sans-serif;
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        box-sizing: border-box;
-                                                                        text-transform: uppercase;
-                                                                        color: #32425C;
-                                                                    }
-                                                                    
-                                                                    .special-title-link {
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 14px;
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        justify-content: center;
-                                                                        min-width: 192px;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        margin-top: 24px;
-                                                                        margin-bottom: 27px;
-                                                                        margin-right: 4px;
-                                                                        box-sizing: border-box;
-                                                                        color: #ffffff;
-                                                                        background: var(--basic-red);
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .special-title-link:active {
-                                                                        background: var(--special-red);
-                                                                    }
-                                                                    
-                                                                    .special-title-link:focus {
-                                                                        outline: none;
-                                                                        background: var(--special-red);
-                                                                    }
-                                                                    
-                                                                    .popular-goods {
-                                                                        margin-bottom: 49px;
-                                                                    }
-                                                                    
-                                                                    .cards-list {
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        list-style: none;
-                                                                        width: calc(100% + 20px);
-                                                                    }
-                                                                    
-                                                                    .card {
-                                                                        width: 220px;
-                                                                        box-sizing: border-box;
-                                                                        border: 1px solid #eaeaea;
-                                                                        margin-right: 20px;
-                                                                        position: relative;
-                                                                        margin-bottom: 23px;
-                                                                        padding-bottom: 95px;
-                                                                        text-align: center;
-                                                                    }
-                                                                    
-                                                                    .card-img-container {
-                                                                        height: 170px;
-                                                                        margin-bottom: 10px;
-                                                                    }
-                                                                    
-                                                                    .card-img {
-                                                                        max-height: 100%;
-                                                                        margin-top: 5px;
-                                                                    }
-                                                                    
-                                                                    .card-name {
-                                                                        width: 150px;
-                                                                        display: inline-block;
-                                                                        text-align: center;
-                                                                        font-family: PT Sans;
-                                                                        font-style: normal;
-                                                                        font-weight: bold;
-                                                                        font-size: 18px;
-                                                                        line-height: 20px;
-                                                                        color: #000000;
-                                                                    }
-                                                                    
-                                                                    .card-button-container {
-                                                                        display: none;
-                                                                        padding-top: 38px;
-                                                                        padding-left: 40px;
-                                                                        padding-right: 40px;
-                                                                    }
-                                                                    
-                                                                    .card:hover {
-                                                                        box-shadow: 3px 3px 2px 3px #888888;
-                                                                    }
-                                                                    
-                                                                    .card:hover .card-button-container {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .card:hover .card-img {
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    .card-button {
-                                                                        display: block;
-                                                                        margin-bottom: 20px;
-                                                                        height: 38px;
-                                                                        width: 100%;
-                                                                        border: none;
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .card-button-buy {
-                                                                        background: var(--basic-green);
-                                                                        color: #ffffff;
-                                                                        border-bottom: 2px solid green;
-                                                                    }
-                                                                    
-                                                                    .card-button-bookmark {
-                                                                        background: var(--basic-white);
-                                                                        color: blue;
-                                                                        border: 2px solid var(--basic-green);
-                                                                    }
-                                                                    
-                                                                    .card-old-price {
-                                                                        color: #a9a9a9;
-                                                                        text-transform: uppercase;
-                                                                        font-size: 18px;
-                                                                        text-decoration-line: line-through;
-                                                                        font-weight: bold;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        margin-bottom: 12px;
-                                                                    }
-                                                                    
-                                                                    .card-new-price {
-                                                                        text-align: center;
-                                                                        background: #58a;
-                                                                        background: linear-gradient(-135deg, transparent 26px, red 0) top right, linear-gradient(-45deg, transparent 26px, red 0) bottom right;
-                                                                        background-size: 100% 50%;
-                                                                        background-repeat: no-repeat;
-                                                                        text-overflow: ellipsis;
-                                                                        white-space: nowrap;
-                                                                        padding: 10px 68px 7px 30px;
-                                                                        display: inline-block;
-                                                                        margin: 0 auto;
-                                                                        margin-left: 34px;
-                                                                        border-radius: 4px 0 0 4px;
-                                                                        color: #fff;
-                                                                        font-size: 18px;
-                                                                        font-weight: bold;
-                                                                    }
-                                                                    
-                                                                    .card-price-block {
-                                                                        width: 100%;
-                                                                        position: absolute;
-                                                                        bottom: 20px;
-                                                                        left: 0;
-                                                                        text-align: center;
-                                                                    }
-                                                                    
-                                                                    .new::after {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        top: 0;
-                                                                        right: 0;
-                                                                        background: url("../img/svg/new-label.svg") no-repeat top left;
-                                                                        width: 70px;
-                                                                        height: 70px;
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .popular-manufacturers-title {
-                                                                        margin-bottom: 20px;
-                                                                    }
-                                                                    
-                                                                    .popular-manufacturers-list {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        justify-content: space-between;
-                                                                        align-items: center;
-                                                                    }
-                                                                    
-                                                                    .special-title-partner {
-                                                                        margin-bottom: 20px;
-                                                                    }
-                                                                    
-                                                                    .card-partner {
-                                                                        display: flex;
-                                                                        flex-wrap: nowrap;
-                                                                        align-items: center;
-                                                                        justify-content: center;
-                                                                        width: 220px;
-                                                                        height: 145px;
-                                                                        background: #FFFFFF;
-                                                                        border: 1px solid #EAEAEA;
-                                                                        box-sizing: border-box;
-                                                                        margin: 0;
-                                                                        margin-bottom: 20px;
-                                                                        padding: 0;
-                                                                    }
-                                                                    
-                                                                    .catalog-page {
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                    }
-                                                                    /****************Сервисы******************/
-                                                                    
-                                                                    .services {
-                                                                        background: #F1F5F7;
-                                                                        padding-top: 61px;
-                                                                        padding-bottom: 46px;
-                                                                    }
-                                                                    
-                                                                    .header-services {
-                                                                        font-weight: normal;
-                                                                        font-size: 30px;
-                                                                        line-height: 30px;
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .header-services-text {
-                                                                        font-size: 13px;
-                                                                        line-height: 24px;
-                                                                    }
-                                                                    
-                                                                    .services-article-block {
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .services-list {
-                                                                        min-width: 240px;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        margin-right: 80px;
-                                                                        list-style: none;
-                                                                    }
-                                                                    
-                                                                    .services-label {
-                                                                        display: block;
-                                                                        background: #32425C;
-                                                                        color: #ffffff;
-                                                                        font-size: 20px;
-                                                                        padding-top: 16px;
-                                                                        padding-left: 25px;
-                                                                        padding-bottom: 16px;
-                                                                        padding-right: 1px;
-                                                                        cursor: pointer;
-                                                                        font-family: Cuprum;
-                                                                        font-weight: bold;
-                                                                        line-height: 31px;
-                                                                    }
-                                                                    
-                                                                    .services-articles {
-                                                                        width: 100%;
-                                                                    }
-                                                                    
-                                                                    .services-article {
-                                                                        min-height: 285px;
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    .services-item {
-                                                                        position: relative;
-                                                                    }
-                                                                    
-                                                                    .services-item::after {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        width: 100%;
-                                                                        height: 2px;
-                                                                        bottom: 0;
-                                                                        left: 0;
-                                                                        background: url("../img/border.gif") repeat-x top left;
-                                                                    }
-                                                                    
-                                                                    .services-item:last-child::after {
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    .services-article-delivery {
-                                                                        background: url("../img/Layer-131-1.png") no-repeat top right;
-                                                                    }
-                                                                    
-                                                                    .services-article-guarantee {
-                                                                        background: url("../img/Layer-130.png") no-repeat top right;
-                                                                    }
-                                                                    
-                                                                    .services-article-credit {
-                                                                        background: url("../img/Layer-119.png") no-repeat top right;
-                                                                    }
-                                                                    
-                                                                    .services-input:checked+.services-article {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .services-article-title {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        width: 305px;
-                                                                        margin-bottom: 30px;
-                                                                        font-size: 36px;
-                                                                        font-weight: normal;
-                                                                        font-family: Cuprum;
-                                                                        line-height: 30px;
-                                                                        text-transform: uppercase;
-                                                                        color: #32425C;
-                                                                    }
-                                                                    
-                                                                    .services-article-text {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        width: 305px;
-                                                                        font-family: PT Sans;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 13px;
-                                                                        line-height: 24px;
-                                                                    }
-                                                                    /****************О Нас********************/
-                                                                    
-                                                                    .about-company-container {
-                                                                        max-width: 940px;
-                                                                        margin: 0 auto;
-                                                                        padding: 0;
-                                                                        margin-bottom: 70px;
-                                                                        color: #000;
-                                                                        background: #fff;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        justify-content: space-between;
-                                                                        align-items: baseline;
-                                                                    }
-                                                                    
-                                                                    .about-delivery {
-                                                                        min-width: 470px;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                    }
-                                                                    
-                                                                    .header-about-company {
-                                                                        font-size: 29px;
-                                                                        margin: 0px;
-                                                                        padding: 0px;
-                                                                        padding-bottom: 24px;
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .about-company-text {
-                                                                        font-family: PT Sans;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 13px;
-                                                                        line-height: 24px;
-                                                                    }
-                                                                    
-                                                                    .info {
-                                                                        display: block;
-                                                                        min-width: 300px;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                    }
-                                                                    
-                                                                    .list-of-delivery-companies {
-                                                                        margin: 11px 0 34px 36px;
-                                                                        font-family: "Cuprum", "Arial", sans-serif;
-                                                                        font-size: 18px;
-                                                                        line-height: 40px;
-                                                                    }
-                                                                    
-                                                                    .write-us-button {
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 14px;
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        justify-content: center;
-                                                                        min-width: 192px;
-                                                                        box-sizing: border-box;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        margin-top: 24px;
-                                                                        border: none;
-                                                                        color: #ffffff;
-                                                                        background: var(--basic-red);
-                                                                        text-transform: uppercase;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .write-us-button:active {
-                                                                        outline: none;
-                                                                    }
-                                                                    
-                                                                    .about-us-button {
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 14px;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        align-items: center;
-                                                                        justify-content: center;
-                                                                        max-width: 220px;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        padding-top: 11px;
-                                                                        padding-bottom: 9px;
-                                                                        box-sizing: border-box;
-                                                                        color: #ffffff;
-                                                                        background: var(--basic-red);
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    /*Catalog*/
-                                                                    
-                                                                    .catalog-container {
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                        align-items: flex-start;
-                                                                    }
-                                                                    
-                                                                    .catalog-filter-block {
-                                                                        width: 300px;
-                                                                    }
-                                                                    
-                                                                    .catalog-goods {
-                                                                        width: 100%;
-                                                                        margin-left: 10px;
-                                                                    }
-                                                                    
-                                                                    .catalog-title {
-                                                                        font-weight: normal;
-                                                                        font-size: 30px;
-                                                                        line-height: 30px;
-                                                                        background: #F2F6F8;
-                                                                        color: #32425C;
-                                                                        text-transform: uppercase;
-                                                                        margin-bottom: 20px;
-                                                                        padding: 20px 0 20px 29px;
-                                                                    }
-                                                                    
-                                                                    .sorting-block {
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                        align-items: center;
-                                                                        padding-top: 10px;
-                                                                        padding-bottom: 10px;
-                                                                        padding-left: 19px;
-                                                                        margin-bottom: 10px;
-                                                                        background: #f2f6f8;
-                                                                    }
-                                                                    
-                                                                    .sorting-list {
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                        width: 100%;
-                                                                        margin-right: 21px;
-                                                                        margin-left: 150px;
-                                                                        list-style: none;
-                                                                    }
-                                                                    
-                                                                    .sorting-button {
-                                                                        color: var(--basic-greylight);
-                                                                        border: none;
-                                                                        border-bottom: 1px dotted var(--basic-red);
-                                                                        background: none;
-                                                                    }
-                                                                    
-                                                                    .sorting-button:hover {
-                                                                        color: var(--basic-black);
-                                                                        border-bottom: 1px solid var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .sorting-button:focus {
-                                                                        outline: none;
-                                                                    }
-                                                                    
-                                                                    .sorting-button:active {
-                                                                        outline: none;
-                                                                        border-bottom: 1px solid transparent;
-                                                                        color: var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .up-down-button:hover .up-down {
-                                                                        fill: var(--basic-black)
-                                                                    }
-                                                                    
-                                                                    .up-down-button:active .up-down {
-                                                                        fill: var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .up-down {
-                                                                        fill: #c5c5c5;
-                                                                        width: 10px;
-                                                                        height: 11px;
-                                                                    }
-                                                                    
-                                                                    .sorting-title {
-                                                                        text-transform: uppercase;
-                                                                        font-weight: normal;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                    }
-                                                                    
-                                                                    .filter-fieldset {
-                                                                        border: none;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                    }
-                                                                    
-                                                                    .filter-legend {
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                        text-transform: uppercase;
-                                                                        margin-bottom: 20px;
-                                                                        font-family: PT Sans;
-                                                                        font-style: normal;
-                                                                        font-weight: bold;
-                                                                        font-size: 17px;
-                                                                        line-height: 30px;
-                                                                    }
-                                                                    
-                                                                    .filter-list {
-                                                                        list-style: none;
-                                                                        padding: 0;
-                                                                        margin: 0;
-                                                                    }
-                                                                    
-                                                                    .filter-item {
-                                                                        margin-bottom: 10px;
-                                                                    }
-                                                                    
-                                                                    .filter-label {
-                                                                        position: relative;
-                                                                        padding-left: 37px;
-                                                                        text-transform: uppercase;
-                                                                        cursor: pointer;
-                                                                        font-size: 16px;
-                                                                        font-family: 'PT Sans';
-                                                                    }
-                                                                    
-                                                                    .filter-label::before {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        top: 0;
-                                                                        left: 0;
-                                                                        width: 21px;
-                                                                        height: 19px;
-                                                                        border: 2px solid #c5c5c5;
-                                                                        border-radius: 3px;
-                                                                        box-sizing: content-box;
-                                                                    }
-                                                                    
-                                                                    .filter-input:checked+.filter-label::after {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        display: block;
-                                                                        top: -3px;
-                                                                        left: 7px;
-                                                                        height: 13px;
-                                                                        width: 18px;
-                                                                        border-left: 3px solid #c5c5c5;
-                                                                        border-bottom: 3px solid #c5c5c5;
-                                                                        transform: rotate(-45deg);
-                                                                    }
-                                                                    
-                                                                    .filter-label:hover::before {
-                                                                        border-color: #b5b5b5;
-                                                                    }
-                                                                    
-                                                                    .filter-input:checked+.filter-label:hover::after {
-                                                                        border-color: #b5b5b5;
-                                                                    }
-                                                                    /*footer*/
-                                                                    
-                                                                    .footer-main {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .footer-up-text {
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 18px;
-                                                                        line-height: 24px;
-                                                                    }
-                                                                    
-                                                                    .footer-up {
-                                                                        background: #32425C;
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .footer-up-container {
-                                                                        width: 940px;
-                                                                        margin: 0 auto;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .footer-up-left {
-                                                                        min-width: 360px;
-                                                                    }
-                                                                    
-                                                                    .footer-up-address {
-                                                                        color: #F3F7F9;
-                                                                    }
-                                                                    
-                                                                    .footer-up-right {
-                                                                        min-width: 580px;
-                                                                    }
-                                                                    
-                                                                    .footer-navigation {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .footer-navigation-list {
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .footer-navigation-otherness {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    .footer-navigation-otherness-list {
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .footer-navigation-link {
-                                                                        color: #f1f5f7;
-                                                                    }
-                                                                    
-                                                                    .footer-navigation-otherness-link {
-                                                                        color: #ffd180;
-                                                                    }
-                                                                    
-                                                                    .footer-down-text {
-                                                                        font-family: Cuprum;
-                                                                        font-style: normal;
-                                                                        font-weight: normal;
-                                                                        font-size: 16px;
-                                                                        line-height: 18px;
-                                                                        color: #ffffff;
-                                                                    }
-                                                                    
-                                                                    .footer-down {
-                                                                        min-height: 107px;
-                                                                        background: #293449;
-                                                                    }
-                                                                    
-                                                                    .footer-down-container {
-                                                                        width: 940px;
-                                                                        margin: 0 auto;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .copyright {}
-                                                                    
-                                                                    .social {
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                        align-items: center;
-                                                                    }
-                                                                    
-                                                                    .social-list {
-                                                                        list-style: none;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .social-list-item {
-                                                                        text-align: center;
-                                                                        height: 44px;
-                                                                        width: 44px;
-                                                                    }
-                                                                    
-                                                                    .social-list-link {
-                                                                        display: inline-block;
-                                                                    }
-                                                                    
-                                                                    .icon-vk {
-                                                                        background-image: url();
-                                                                    }
-                                                                    
-                                                                    .icon-fb {
-                                                                        background-image: url();
-                                                                    }
-                                                                    
-                                                                    .icon-insta {
-                                                                        background-image: url();
-                                                                    }
-                                                                    
-                                                                    .communication {}
-                                                                    
-                                                                    .communication-list {
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .communication-list-item {
-                                                                        margin-left: 51px;
-                                                                    }
-                                                                    /****************Modal*****************/
-                                                                    
-                                                                    .modal-buy {
-                                                                        display: none;
-                                                                        position: fixed;
-                                                                        margin: auto;
-                                                                        left: 0;
-                                                                        right: 0;
-                                                                        transform: translateY(-50%);
-                                                                        top: 50%;
-                                                                        width: 620px;
-                                                                        min-height: 282px;
-                                                                        border-top: 6px solid var(--basic-red);
-                                                                        background: var(--basic-white);
-                                                                        padding-top: 68px;
-                                                                        text-align: center;
-                                                                    }
-                                                                    
-                                                                    .modal-buy-show {
-                                                                        display: block;
-                                                                        animation: bounce 0.6s;
-                                                                    }
-                                                                    
-                                                                    .close-btn {
-                                                                        position: absolute;
-                                                                        width: 21px;
-                                                                        height: 21px;
-                                                                        right: 10px;
-                                                                        top: 10px;
-                                                                        border: none;
-                                                                        background: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .close-btn::before {
-                                                                        content: '';
-                                                                        position: absolute;
-                                                                        top: 10px;
-                                                                        right: 10px;
-                                                                        transform: rotate(-45deg);
-                                                                        width: 20px;
-                                                                        height: 5px;
-                                                                        background: #ee3643;
-                                                                        border: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .close-btn::after {
-                                                                        content: '';
-                                                                        position: absolute;
-                                                                        top: 10px;
-                                                                        right: 10px;
-                                                                        transform: rotate(45deg);
-                                                                        width: 20px;
-                                                                        height: 5px;
-                                                                        background: #ee3643;
-                                                                        border: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .modal-buy-text {
-                                                                        padding: 0;
-                                                                        padding-left: 91px;
-                                                                        position: relative;
-                                                                        margin: 0 auto;
-                                                                        margin-bottom: 60px;
-                                                                        display: inline-block;
-                                                                        font-size: 22px;
-                                                                        font-weight: bold;
-                                                                        margin-left: -96px;
-                                                                    }
-                                                                    
-                                                                    .modal-buy-text::before {
-                                                                        content: "";
-                                                                        position: absolute;
-                                                                        width: 66px;
-                                                                        height: 66px;
-                                                                        border-radius: 50%;
-                                                                        top: -20px;
-                                                                        left: -3px;
-                                                                        background: var(--basic-green);
-                                                                    }
-                                                                    
-                                                                    .modal-buy-buttons {
-                                                                        background: var(--basic-greylight);
-                                                                        padding-top: 40px;
-                                                                        padding-bottom: 40px;
-                                                                        display: flex;
-                                                                        justify-content: center;
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .modal-buy-button {
-                                                                        display: block;
-                                                                        padding: 10px 20px;
-                                                                    }
-                                                                    
-                                                                    .button-create-order {
-                                                                        background: var(--basic-red);
-                                                                        color: var(--basic-white);
-                                                                    }
-                                                                    
-                                                                    .button-return {
-                                                                        background: var(--basic-white);
-                                                                        color: var(--basic-black);
-                                                                        border: none;
-                                                                    }
-                                                                    /*******************Map*******************/
-                                                                    
-                                                                    .modal-map {
-                                                                        display: none;
-                                                                        position: fixed;
-                                                                        margin: auto;
-                                                                        left: 0;
-                                                                        right: 0;
-                                                                        transform: translateY(-50%);
-                                                                        top: 50%;
-                                                                        width: 940px;
-                                                                        height: 448px;
-                                                                        border-top: 6px solid var(--basic-red);
-                                                                    }
-                                                                    
-                                                                    .modal-map-show {
-                                                                        display: block;
-                                                                        animation: bounce 0.6s;
-                                                                    }
-                                                                    
-                                                                    .modal-map p {
-                                                                        position: absolute;
-                                                                        top: 0;
-                                                                        left: 0;
-                                                                        z-index: 1;
-                                                                        margin: 0;
-                                                                    }
-                                                                    
-                                                                    .modal-map iframe {
-                                                                        position: relative;
-                                                                        z-index: 2;
-                                                                        border: none;
-                                                                    }
-                                                                    
-                                                                    .close-btn-map {
-                                                                        position: absolute;
-                                                                        width: 21px;
-                                                                        height: 21px;
-                                                                        right: 10px;
-                                                                        top: 10px;
-                                                                        border: none;
-                                                                        outline: 0;
-                                                                        background: none;
-                                                                        cursor: pointer;
-                                                                        z-index: 3;
-                                                                    }
-                                                                    
-                                                                    .close-btn-map:active {
-                                                                        border: none;
-                                                                        outline: none;
-                                                                    }
-                                                                    
-                                                                    .close-btn-map::before {
-                                                                        content: '';
-                                                                        position: absolute;
-                                                                        top: 10px;
-                                                                        right: 10px;
-                                                                        transform: rotate(-45deg);
-                                                                        width: 20px;
-                                                                        height: 5px;
-                                                                        background: #ee3643;
-                                                                        border: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .close-btn-map::after {
-                                                                        content: '';
-                                                                        position: absolute;
-                                                                        top: 10px;
-                                                                        right: 10px;
-                                                                        transform: rotate(45deg);
-                                                                        width: 20px;
-                                                                        height: 5px;
-                                                                        background: #ee3643;
-                                                                        border: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    /*******************Write-Us*******************/
-                                                                    
-                                                                    .write-us {
-                                                                        display: none;
-                                                                        position: fixed;
-                                                                        margin: auto;
-                                                                        left: 0;
-                                                                        right: 0;
-                                                                        transform: translateY(-50%);
-                                                                        top: 50%;
-                                                                        width: 620px;
-                                                                        min-height: 282px;
-                                                                        border-top: 6px solid var(--basic-red);
-                                                                        background: var(--basic-white);
-                                                                        padding-top: 68px;
-                                                                    }
-                                                                    
-                                                                    .write-us-show {
-                                                                        display: block;
-                                                                        animation: bounce 0.6s;
-                                                                    }
-                                                                    
-                                                                    .write-us-buttons {
-                                                                        background: var(--basic-greylight);
-                                                                        padding-top: 40px;
-                                                                        padding-bottom: 40px;
-                                                                        text-transform: uppercase;
-                                                                    }
-                                                                    
-                                                                    .send-us-button {
-                                                                        display: block;
-                                                                        margin: 0 auto;
-                                                                        width: 460px;
-                                                                        padding: 10px;
-                                                                        background: var(--basic-red);
-                                                                        color: var(--basic-white);
-                                                                        border: none;
-                                                                    }
-                                                                    
-                                                                    .letter {
-                                                                        display: block;
-                                                                        margin: 0;
-                                                                        padding: 0;
-                                                                        margin-bottom: 37px;
-                                                                        min-width: 460px;
-                                                                        min-height: 114px;
-                                                                    }
-                                                                    
-                                                                    .letter::placeholder {
-                                                                        color: #000000;
-                                                                    }
-                                                                    
-                                                                    .close-btn-write-us {
-                                                                        position: absolute;
-                                                                        width: 21px;
-                                                                        height: 21px;
-                                                                        right: 10px;
-                                                                        top: 10px;
-                                                                        border: none;
-                                                                        background: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .close-btn-write-us::before {
-                                                                        content: '';
-                                                                        position: absolute;
-                                                                        top: 10px;
-                                                                        right: 10px;
-                                                                        transform: rotate(-45deg);
-                                                                        width: 20px;
-                                                                        height: 5px;
-                                                                        background: #ee3643;
-                                                                        border: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .close-btn-write-us::after {
-                                                                        content: '';
-                                                                        position: absolute;
-                                                                        top: 10px;
-                                                                        right: 10px;
-                                                                        transform: rotate(45deg);
-                                                                        width: 20px;
-                                                                        height: 5px;
-                                                                        background: #ee3643;
-                                                                        border: none;
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    
-                                                                    .write-us-container {
-                                                                        width: 460px;
-                                                                        margin: 0 auto;
-                                                                    }
-                                                                    
-                                                                    .write-us-name {
-                                                                        display: flex;
-                                                                        justify-content: space-between;
-                                                                    }
-                                                                    
-                                                                    .write-us-input-block {
-                                                                        width: 220px;
-                                                                    }
-                                                                    
-                                                                    .write-us-label {
-                                                                        display: block;
-                                                                        font-size: 18px;
-                                                                        font-family: 'Cuprum';
-                                                                        margin-bottom: 10px;
-                                                                        ;
-                                                                    }
-                                                                    
-                                                                    .write-us-input {
-                                                                        width: 220px;
-                                                                        height: 38px;
-                                                                    }
-                                                                    /*******************************************/
-                                                                    
-                                                                    @keyframes bounce {
-                                                                        0% {
-                                                                            transform: translateY(-2000px);
-                                                                        }
-                                                                        70% {
-                                                                            transform: translateY(30px);
-                                                                        }
-                                                                        90% {
-                                                                            transform: translateY(-10px);
-                                                                        }
-                                                                        100% {
-                                                                            transform: translateY(0);
-                                                                        }
-                                                                    }
+/* Variables */
+
+ :root {
+    --basic-red: #ee3643;
+    --basic-green: #63a63e;
+    --basic-grey: #3d546f;
+    --basic-greylight: #c5c5c5;
+    --basic-background: #f1f5f7;
+    --basic-black: #000000;
+    --basic-white: #ffffff;
+    --special: #663d15;
+    --special-yellow: #ffbf47;
+    --special-blue: #3bbce3;
+    --special-lilac: #dc91d8;
+    --special-red: #BA2732;
+    --special-greenlight: #8ed78f;
+    --special-bluelilac: #32425C;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Global */
+
+body {
+    font-family: "Cuprum", "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cuprum', sans-serif;
+}
+
+p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button:active {
+    border-color: #4777a6;
+    background: #4e87c0;
+    color: #fff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* Header */
+
+.header {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px;
+}
+
+.header-menu {
+    background: #293449;
+    color: #ffffff;
+}
+
+.header-menu-container {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 220px;
+}
+
+.header-menu-link {
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 23px;
+    font-size: 18px;
+}
+
+.bookmark {
+    padding-left: 37px;
+}
+
+.cart {
+    padding-left: 54px;
+}
+
+.header-menu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.header-menu-link:hover::before {
+    opacity: 1;
+}
+
+.header-button {
+    cursor: pointer;
+}
+
+.logo-technomart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 220px;
+    height: 47px;
+}
+
+.search-container {
+    width: 271px;
+    height: 42px;
+}
+
+.search-form {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.search-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding-left: 42px;
+    font-size: 18px;
+}
+
+.search-svg {
+    position: absolute;
+    fill: var(--basic-white);
+    opacity: 0.5;
+    left: 16px;
+    top: 12px;
+}
+
+.search-input:hover+.search-svg {
+    opacity: 1;
+}
+
+.search-svg:hover {
+    opacity: 1;
+}
+
+.search-input:focus {
+    background: var(--basic-white);
+    outline: none;
+}
+
+.search-input:focus+.search-svg {
+    opacity: 1;
+    fill: var(--basic-red);
+}
+
+.search-input:valid {
+    background: var(--basic-white);
+}
+
+.search-input:valid+.search-svg {
+    fill: var(--basic-red);
+    opacity: 1;
+}
+
+.search-input::placeholder {
+    color: var(--basic-white);
+}
+
+.bookmark::before {
+    width: 14px;
+    height: 16px;
+    left: 18px;
+    top: 12px;
+    background-image: url("../img/svg/icon-bookmark.svg");
+}
+
+.cart::before {
+    width: 15px;
+    height: 15px;
+    top: 13px;
+    left: 32px;
+    background-image: url("../img/svg/icon-cart.svg");
+}
+
+.create-order {
+    border: none;
+    padding: 11px 20px;
+    font-size: 18px;
+    font-family: 'Cuprum';
+    background: var(--basic-green);
+    color: var(--basic-white);
+}
+
+.contacts {
+    width: 100%;
+    max-width: 940px;
+    padding: 0;
+    padding-top: 43px;
+    padding-bottom: 44px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-description {
+    padding: 0;
+    margin: 0;
+    margin-left: 29px;
+    width: 197px;
+    color: var(--basic-red);
+    font-size: 16px;
+    line-height: 24px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.telephone {
+    position: relative;
+    margin: 46px 50px 4px 22px;
+    border: 3px solid #fff;
+    width: 264px;
+    font-size: 21px;
+    line-height: 18px;
+}
+
+.telephone::before {
+    content: "";
+}
+
+.user-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: var(--basic-black);
+    background-color: var(--basic-background);
+}
+
+.authorized:active {
+    color: var(--basic-greylight);
+}
+
+.user-block-login {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.authorized {
+    margin: 0;
+    padding: 0;
+    padding: 12px 65px 14px 46px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 18px;
+    font-family: "Cuprum", "Arial", sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+.authorized-button,
+.login-buttons {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--basic-white);
+}
+
+.authorized-button:hover .login-buttons {
+    fill: var(--basic-grey);
+}
+
+.authorized-button:active .login-buttons {
+    fill: var(--basic-greylight);
+}
+
+.user {
+    width: 20px;
+    height: 18px;
+    fill: var(--basic-greylight)
+}
+
+.login-image {
+    width: 20px;
+    height: 17px;
+    fill: var(--basic-greylight)
+}
+
+.logout {
+    width: 20px;
+    height: 17px;
+    fill: var(--basic-greylight)
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-orders {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.my-orders:active {
+    color: var(--basic-greylight);
+}
+
+.my-orders:hover {
+    color: var(--basic-red);
+}
+
+.cabinet {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.cabinet:active {
+    color: var(--basic-greylight);
+}
+
+.cabinet:hover {
+    color: var(--basic-red);
+}
+
+.login-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 281px;
+}
+
+.login {
+    margin: 0 auto;
+    text-align: center;
+    width: 121px;
+    height: 45px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.registration {
+    margin-left: 11px;
+    padding-left: 22px;
+    width: 150px;
+    height: 45px;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+}
+
+.registration-link {
+    width: 150px;
+    color: #000000;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    background-color: #293449;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation-link {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.bread-crumbs {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 32px;
+}
+
+
+/**********************Main************************/
+
+.promo-block {
+    margin-bottom: 60px;
+    margin-top: 59px;
+}
+
+.promo-block-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.slider-block {
+    grid-column: 1/3;
+    grid-row: 2/4;
+}
+
+.product-sections {
+    position: relative;
+    min-width: 300px;
+    min-height: 123px;
+    color: #ffffff;
+}
+
+.product-sections::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.product-sections-text {
+    background: 0 0;
+    display: block;
+    margin: 21px 0 0 23px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.product-sections-link {
+    display: inline-block;
+    min-width: 135px;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 12px 0 0 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, .1);
+    color: #ffffff;
+}
+
+.product-materials {
+    background: #FFBF47;
+}
+
+.product-materials::after {
+    top: 33px;
+    right: 40px;
+    width: 44px;
+    height: 65px;
+    background-image: url("../img/svg/icon-1.svg");
+}
+
+.product-tools {
+    background: #3BBCE3;
+}
+
+.product-tools::after {
+    top: 33px;
+    right: 40px;
+    width: 75px;
+    height: 61px;
+    background-image: url("../img/svg/icon-2.svg");
+}
+
+.product-equipment {
+    background: #DC91D8;
+}
+
+.product-equipment::after {
+    top: 33px;
+    right: 40px;
+    width: 78px;
+    height: 62px;
+    background-image: url("../img/svg/icon-3.svg");
+}
+
+.product-discounts {
+    background: #8ED78F;
+}
+
+.product-discounts::after {
+    top: 33px;
+    right: 40px;
+    width: 59px;
+    height: 72px;
+    background-image: url("../img/svg/icon-4.svg");
+}
+
+.product-delivery {
+    background: #FFC047;
+}
+
+.product-delivery::after {
+    top: 33px;
+    right: 40px;
+    width: 78px;
+    height: 63px;
+    background-image: url("../img/svg/icon-5.svg");
+}
+
+
+/***************Slider***************/
+
+.slider {
+    width: 620px;
+    height: 266px;
+    /*background-image: url(../img/Worker-with-a-drill.jpg);*/
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-screen-list {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.slider-screen-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slider-screen-first {
+    background: brown url("../img/slider-1.jpg") no-repeat top left;
+}
+
+.slider-screen-second {
+    background: brown url("../img/slider-2.jpg") no-repeat top left;
+}
+
+.slider-screen-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 21px 21px 21px 23px;
+    margin-bottom: 95px;
+}
+
+.slider-screen-header {
+    font-size: 38px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.slider-screen-text {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+.slider-screen-link {
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+    margin-left: 22px;
+    background: red;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.slider-first-screen:checked~.slider-screen-list .slider-screen-first {
+    display: block;
+}
+
+.slider-second-screen:checked~.slider-screen-list .slider-screen-second {
+    display: block;
+}
+
+.slider-bullet-block {
+    list-style: none;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-bullet-label {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.slider-first-screen:checked~.slider-bullet-block .slider-bullet-first {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: red;
+}
+
+.slider-second-screen:checked~.slider-bullet-block .slider-bullet-second {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: red;
+}
+
+.flip {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 22px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.flip-first {
+    left: 20px;
+    background-image: url("../img/svg/icon-left.svg");
+}
+
+.flip-second {
+    right: 20px;
+    background-image: url("../img/svg/icon-right.svg");
+}
+
+
+/****************************************************************/
+
+.special-title {
+    background-color: #f9f5f0;
+    margin: 0;
+    padding-right: 14px;
+    padding-left: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.special-title-caption {
+    padding: 0;
+    margin: 0;
+    margin-top: 29px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Cuprum", "Arial", sans-serif;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #32425C;
+}
+
+.special-title-link {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 192px;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    margin-bottom: 27px;
+    margin-right: 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background: var(--basic-red);
+    text-transform: uppercase;
+}
+
+.special-title-link:active {
+    background: var(--special-red);
+}
+
+.special-title-link:focus {
+    outline: none;
+    background: var(--special-red);
+}
+
+.popular-goods {
+    margin-bottom: 49px;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: calc(100% + 20px);
+}
+
+.card {
+    width: 220px;
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
+    margin-right: 20px;
+    position: relative;
+    margin-bottom: 23px;
+    padding-bottom: 95px;
+    text-align: center;
+}
+
+.card-img-container {
+    height: 170px;
+    margin-bottom: 10px;
+}
+
+.card-img {
+    max-height: 100%;
+    margin-top: 5px;
+}
+
+.card-name {
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.card-button-container {
+    display: none;
+    padding-top: 38px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 2px 3px #888888;
+}
+
+.card:hover .card-button-container {
+    display: block;
+}
+
+.card:hover .card-img {
+    display: none;
+}
+
+.card-button {
+    display: block;
+    margin-bottom: 20px;
+    height: 38px;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+}
+
+.card-button-buy {
+    background: var(--basic-green);
+    color: #ffffff;
+    border-bottom: 2px solid green;
+}
+
+.card-button-bookmark {
+    background: var(--basic-white);
+    color: blue;
+    border: 2px solid var(--basic-green);
+}
+
+.card-old-price {
+    color: #a9a9a9;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration-line: line-through;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.card-new-price {
+    text-align: center;
+    background: #58a;
+    background: linear-gradient(-135deg, transparent 26px, red 0) top right, linear-gradient(-45deg, transparent 26px, red 0) bottom right;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 68px 7px 30px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: 34px;
+    border-radius: 4px 0 0 4px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-price-block {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+}
+
+.new::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/svg/new-label.svg") no-repeat top left;
+    width: 70px;
+    height: 70px;
+    display: block;
+}
+
+.popular-manufacturers-title {
+    margin-bottom: 20px;
+}
+
+.popular-manufacturers-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special-title-partner {
+    margin-bottom: 20px;
+}
+
+.card-partner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 145px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.card-partner:hover {
+    box-shadow: 8px 7px 30px -11px rgba(0, 0, 0, 0.9);
+}
+
+.card-partner:active {
+    opacity: 0.5;
+}
+
+.catalog-page {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-page-item {
+    margin-right: 10px;
+}
+
+.catalog-page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    min-width: 38px;
+    height: 38px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    color: var(--basic-black);
+}
+
+.active-page {
+    color: var(--basic-white);
+    background: var(--basic-red);
+}
+
+.catalog-page-link:hover {
+    border-color: var(--basic-greylight);
+    b
+}
+
+.catalog-page-link:active {
+    border-color: var(--basic-red);
+}
+
+
+/****************Сервисы******************/
+
+.services {
+    background: #F1F5F7;
+    padding-top: 61px;
+    padding-bottom: 46px;
+}
+
+.header-services {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.header-services-text {
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.services-article-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-list {
+    min-width: 240px;
+    padding: 0;
+    margin: 0;
+    margin-right: 80px;
+    list-style: none;
+}
+
+.services-label {
+    display: block;
+    background: #32425C;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 16px;
+    padding-left: 25px;
+    padding-bottom: 16px;
+    padding-right: 1px;
+    cursor: pointer;
+    font-family: Cuprum;
+    font-weight: bold;
+    line-height: 31px;
+}
+
+.services-articles {
+    width: 100%;
+}
+
+.services-article {
+    min-height: 285px;
+    display: none;
+}
+
+.services-item {
+    position: relative;
+}
+
+.services-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: url("../img/border.gif") repeat-x top left;
+}
+
+.services-item:last-child::after {
+    display: none;
+}
+
+.services-article-delivery {
+    background: url("../img/Layer-131-1.png") no-repeat top right;
+}
+
+.services-article-guarantee {
+    background: url("../img/Layer-130.png") no-repeat top right;
+}
+
+.services-article-credit {
+    background: url("../img/Layer-119.png") no-repeat top right;
+}
+
+.services-input:checked+.services-article {
+    display: block;
+}
+
+.services-article-title {
+    padding: 0;
+    margin: 0;
+    width: 305px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: normal;
+    font-family: Cuprum;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425C;
+}
+
+.services-article-text {
+    padding: 0;
+    margin: 0;
+    width: 305px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+
+/****************О Нас********************/
+
+.about-company-container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 70px;
+    color: #000;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.about-delivery {
+    min-width: 470px;
+    padding: 0;
+    margin: 0;
+}
+
+.header-about-company {
+    font-size: 29px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.about-company-text {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.info {
+    display: block;
+    min-width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.list-of-delivery-companies {
+    margin: 11px 0 34px 36px;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.write-us-button {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 192px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    border: none;
+    color: #ffffff;
+    background: var(--basic-red);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.write-us-button:active {
+    outline: none;
+}
+
+.about-us-button {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 220px;
+    margin: 0;
+    padding: 0;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background: var(--basic-red);
+    text-transform: uppercase;
+}
+
+
+/*Catalog*/
+
+.catalog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.catalog-filter-block {
+    width: 300px;
+}
+
+.catalog-goods {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.catalog-title {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    background: #F2F6F8;
+    color: #32425C;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 29px;
+}
+
+.sorting-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+    margin-bottom: 10px;
+    background: #f2f6f8;
+}
+
+.sorting-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 21px;
+    margin-left: 150px;
+    list-style: none;
+}
+
+.sorting-button {
+    color: var(--basic-greylight);
+    border: none;
+    border-bottom: 1px dotted var(--basic-red);
+    background: none;
+}
+
+.sorting-button:hover {
+    color: var(--basic-black);
+    border-bottom: 1px solid var(--basic-red);
+}
+
+.sorting-button:focus {
+    outline: none;
+}
+
+.sorting-button:active {
+    outline: none;
+    border-bottom: 1px solid transparent;
+    color: var(--basic-red);
+}
+
+.up-down-button:hover .up-down {
+    fill: var(--basic-black)
+}
+
+.up-down-button:active .up-down {
+    fill: var(--basic-red);
+}
+
+.up-down {
+    fill: #c5c5c5;
+    width: 10px;
+    height: 11px;
+}
+
+.sorting-title {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-legend {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-item {
+    margin-bottom: 10px;
+}
+
+.filter-label {
+    position: relative;
+    padding-left: 37px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'PT Sans';
+}
+
+.filter-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 19px;
+    border: 2px solid #c5c5c5;
+    border-radius: 3px;
+    box-sizing: content-box;
+}
+
+.filter-input:checked+.filter-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -3px;
+    left: 7px;
+    height: 13px;
+    width: 18px;
+    border-left: 3px solid #c5c5c5;
+    border-bottom: 3px solid #c5c5c5;
+    transform: rotate(-45deg);
+}
+
+.filter-label:hover::before {
+    border-color: #b5b5b5;
+}
+
+.filter-input:checked+.filter-label:hover::after {
+    border-color: #b5b5b5;
+}
+
+
+/*footer*/
+
+.footer-main {
+    display: block;
+}
+
+.footer-up-text {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer-up {
+    background: #32425C;
+    color: #ffffff;
+}
+
+.footer-up-container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-up-left {
+    min-width: 360px;
+}
+
+.footer-up-address {
+    color: #F3F7F9;
+}
+
+.footer-up-right {
+    min-width: 580px;
+}
+
+.footer-navigation {
+    display: block;
+}
+
+.footer-navigation-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-navigation-otherness {
+    display: block;
+}
+
+.footer-navigation-otherness-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-navigation-link {
+    color: #f1f5f7;
+}
+
+.footer-navigation-otherness-link {
+    color: #ffd180;
+}
+
+.footer-down-text {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.footer-down {
+    min-height: 107px;
+    background: #293449;
+}
+
+.footer-down-container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-list-item {
+    text-align: center;
+    height: 44px;
+    width: 44px;
+}
+
+.social-list-link {
+    display: inline-block;
+}
+
+.icon-vk {
+    background-image: url();
+}
+
+.icon-fb {
+    background-image: url();
+}
+
+.icon-insta {
+    background-image: url();
+}
+
+.communication {}
+
+.communication-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.communication-list-item {
+    margin-left: 51px;
+}
+
+
+/****************Modal*****************/
+
+.modal-buy {
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 620px;
+    min-height: 282px;
+    border-top: 6px solid var(--basic-red);
+    background: var(--basic-white);
+    padding-top: 68px;
+    text-align: center;
+}
+
+.modal-buy-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.close-btn {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.close-btn::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 5px;
+    background: #ee3643;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 5px;
+    background: #ee3643;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-buy-text {
+    padding: 0;
+    padding-left: 91px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: -96px;
+}
+
+.modal-buy-text::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    top: -20px;
+    left: -3px;
+    background: var(--basic-green);
+}
+
+.modal-buy-buttons {
+    background: var(--basic-greylight);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.modal-buy-button {
+    display: block;
+    padding: 10px 20px;
+}
+
+.button-create-order {
+    background: var(--basic-red);
+    color: var(--basic-white);
+}
+
+.button-return {
+    background: var(--basic-white);
+    color: var(--basic-black);
+    border: none;
+}
+
+
+/*******************Map*******************/
+
+.modal-map {
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 940px;
+    height: 448px;
+    border-top: 6px solid var(--basic-red);
+}
+
+.modal-map-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-map p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+}
+
+.modal-map iframe {
+    position: relative;
+    z-index: 2;
+    border: none;
+}
+
+.close-btn-map {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.close-btn-map:active {
+    border: none;
+    outline: none;
+}
+
+.close-btn-map::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 5px;
+    background: #ee3643;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn-map::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 5px;
+    background: #ee3643;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*******************Write-Us*******************/
+
+.write-us {
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 620px;
+    min-height: 282px;
+    border-top: 6px solid var(--basic-red);
+    background: var(--basic-white);
+    padding-top: 68px;
+}
+
+.write-us-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.write-us-buttons {
+    background: var(--basic-greylight);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.send-us-button {
+    display: block;
+    margin: 0 auto;
+    width: 460px;
+    padding: 10px;
+    background: var(--basic-red);
+    color: var(--basic-white);
+    border: none;
+}
+
+.letter {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 37px;
+    min-width: 460px;
+    min-height: 114px;
+}
+
+.letter::placeholder {
+    color: #000000;
+}
+
+.close-btn-write-us {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.close-btn-write-us::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 5px;
+    background: #ee3643;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn-write-us::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 5px;
+    background: #ee3643;
+    border: none;
+    cursor: pointer;
+}
+
+.write-us-container {
+    width: 460px;
+    margin: 0 auto;
+}
+
+.write-us-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.write-us-input-block {
+    width: 220px;
+}
+
+.write-us-label {
+    display: block;
+    font-size: 18px;
+    font-family: 'Cuprum';
+    margin-bottom: 10px;
+    ;
+}
+
+.write-us-input {
+    width: 220px;
+    height: 38px;
+}
+
+
+/*******************************************/
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
