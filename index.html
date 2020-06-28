@@ -14,8 +14,8 @@
     <header class="header">
         <section class="header-menu">
             <div class="header-menu-container">
-                <a class="logo-technomart" href="#" alt="Логотип">
-                    <img src="./img/svg/logo.svg" alt="Техномарт">
+                <a class="logo-technomart">
+                    <img class="logo-technomart-img" src="./img/svg/logo.svg" alt="Техномарт">
                 </a>
                 <div class="search-container">
                     <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -33,25 +33,17 @@
         <section class="contacts">
             <h1 class="shop-description">Интернет-магазин строительных материалов <br>и инструментов для ремонта</h1>
             <div class="contacts-info">
-                <div class="telephone">
-                    <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-                    <img src="./img/svg/icon-phone.svg" width="19" height="19" alt="Телефон">
-                </div>
-                <address>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+                <a class="telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+                <address class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             </div>
             <div class="login-section">
-                <div class="login-section login">
-                    <button class="authorized-button" type="button">
-                        <svg class="login-image login-buttons" width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z"/>
-                            <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z"/>
-                        </svg>
-                    </button>
-                    <a class="login-section login-link" href="#" alt="Войти">Войти</a>
-                </div>
-                <div class="login-section registration">
-                    <a class="login-section registration-link" href="#" alt="Регистрация">Регистрация</a>
-                </div>
+                <button class="login-section login authorized-button" type="button">
+                  <svg class="login-image login-buttons" width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" />
+                    <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" />
+                  </svg> Войти
+                </button>
+                <a class="login-section registration-link" href="#">Регистрация</a>
             </div>
         </section>
         <nav class="navigation">
@@ -349,7 +341,8 @@
         <section class="footer-up">
             <div class="footer-up-container footer-up-text">
                 <div class="footer-up-left">
-                    <a class="header-menu-link logo-technomart" href="#" alt="Логотип">
+                    <a class="logo-technomart-footer">
+                        <img class="logo-technomart-img" src="./img/svg/logo.svg" alt="Техномарт">
                     </a>
                     <address class="footer-up-address">
  					г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8	
