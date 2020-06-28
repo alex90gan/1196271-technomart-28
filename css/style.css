@@ -2,6 +2,7 @@
 
  :root {
     --basic-red: #ee3643;
+    --basic-error: #BA2732;
     --basic-green: #63a63e;
     --basic-grey: #3d546f;
     --basic-greylight: #c5c5c5;
@@ -101,7 +102,7 @@ a {
     position: relative;
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-right: 23px;
+    padding-right: 17px;
     font-size: 18px;
 }
 
@@ -132,10 +133,25 @@ a {
 .logo-technomart {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1px;
     padding: 0;
     width: 220px;
     height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--basic-red);
+    border-bottom: 5px solid #b52932;
+    cursor: pointer;
+}
+
+.logo-technomart-img {
+    width: 108px;
+}
+
+.logo-technomart:active {
+    background: var(--basic-error);
+    border-color: #8d1e26;
 }
 
 .search-container {
@@ -200,8 +216,8 @@ a {
 .bookmark::before {
     width: 14px;
     height: 16px;
-    left: 18px;
-    top: 12px;
+    left: 16px;
+    top: 13px;
     background-image: url("../img/svg/icon-bookmark.svg");
 }
 
@@ -209,13 +225,14 @@ a {
     width: 15px;
     height: 15px;
     top: 13px;
-    left: 32px;
+    left: 31px;
     background-image: url("../img/svg/icon-cart.svg");
 }
 
 .create-order {
+    margin-left: 5px;
     border: none;
-    padding: 11px 20px;
+    padding: 11px 17px;
     font-size: 18px;
     font-family: 'Cuprum';
     background: var(--basic-green);
@@ -226,13 +243,13 @@ a {
     width: 100%;
     max-width: 940px;
     padding: 0;
-    padding-top: 43px;
+    padding-top: 46px;
     padding-bottom: 44px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .shop-description {
@@ -245,19 +262,48 @@ a {
     line-height: 24px;
     font-style: italic;
     font-weight: normal;
+    margin-top: -4px;
+}
+
+.contacts-info {
+    width: 269px;
+    margin-left: 96px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .telephone {
+    display: block;
     position: relative;
-    margin: 46px 50px 4px 22px;
+    margin: 0;
     border: 3px solid #fff;
-    width: 264px;
+    width: 268px;
     font-size: 21px;
-    line-height: 18px;
+    line-height: 16px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    padding-left: 69px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: var(--basic-red);
 }
 
 .telephone::before {
     content: "";
+    background: url(../img/svg/icon-phone.svg) no-repeat top left;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 12px;
+    left: 35px;
+    display: block;
+}
+
+.address {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-size: 14px;
 }
 
 .user-block {
@@ -369,14 +415,14 @@ a {
 }
 
 .login-section {
-    width: 100%;
+    width: 282px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 281px;
+    margin-left: 67px;
 }
 
 .login {
@@ -1473,6 +1519,28 @@ a {
 
 .communication-list-item {
     margin-left: 51px;
+}
+
+.logo-technomart-footer {
+    padding: 0;
+    width: 220px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--basic-red);
+    border-bottom: 5px solid #b52932;
+    cursor: pointer;
+}
+
+.logo-technomart-img {
+    width: 108px;
+    margin-top: -5px;
+}
+
+.logo-technomart-footer:active {
+    background: var(--basic-error);
+    border-color: #8d1e26;
 }
 
 
